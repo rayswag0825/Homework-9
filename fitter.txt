@@ -1,0 +1,7 @@
+data = list(range(40, 46))
+
+def isodd(x):
+    return x % 2 != 0
+
+result = list(filter(isodd, data))
+print(result)

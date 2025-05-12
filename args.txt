@@ -1,0 +1,15 @@
+def register_student(first_name, last_name, *args, **kwargs):
+    middle_name = args[0] if args else ''
+    if middle_name:
+        full_name = f"{first_name} {middle_name} {last_name}"
+    else:
+        full_name = f"{first_name} {last_name}"
+    
+    semester = kwargs.get('semester', '')
+    year = kwargs.get('year', '')
+    course = kwargs.get('course', '')
+    
+    return f"{full_name} is registered for {semester} {year} {course}".strip()
+
+print(register_student('Jane', 'Doe', semester='Summer', year='2023'))
+print(register_student('John', 'Doe', 'Jack', semester='Summer', year='2023', course='AC4RM'))

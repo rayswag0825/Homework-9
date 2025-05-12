@@ -1,0 +1,7 @@
+data = list(range(40, 46))
+
+def max_val(input_list):
+    return list(map(max, input_list))
+
+L = [[1, 2, 5], [4, 3, 3], [1, 7, 6]]
+print(max_val(L))
